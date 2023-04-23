@@ -65,7 +65,7 @@ nav.topBotomBordersOut a:hover:after {
 }
 
 header div.menu {
-    display: flex;
+    display: none;
     flex-direction: column;
     height: calc(100vh - 60px);
     justify-content: space-between;
@@ -212,6 +212,35 @@ nav.pullDown a:hover:before {
     transform: translateY(-13px) rotate(90deg);
 }
 
+/* //HHHHHAAAAARRRRRSSSSSHHHHHH */
+
+#hero-background {
+    z-index: -1;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    filter: brightness(30%);
+}
+
+section.hero h1 {
+    font-size: 5rem;
+    margin: auto;
+}
+
+section.hero h2 {
+    font-size: 4rem;
+    margin: auto;
+}
+
+section.hero div.Introclass_heading {
+    height: inherit;
+    display: flex;
+    align-items: left;
+    justify-content: center;
+    flex-direction: column;
+}
 
 @media screen and (max-width: 960px) {
     nav div.right {
@@ -220,5 +249,17 @@ nav.pullDown a:hover:before {
 
     nav .col {
         display: block;
+    }
+
+    header div.menu {
+        display: flex;
+    }
+
+    section.hero h1 {
+        font-size: 80px;
+    }
+
+    section.hero h2 {
+        font-size: 80px;
     }
 }
