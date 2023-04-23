@@ -11,8 +11,10 @@ elem.addEventListener("click", () => {
     if (menu.classList.contains("menu-visible"))
     {
         menu.classList.remove("menu-visible");
+        menu.style.display = "flex";
     }
     else {
         menu.classList.add("menu-visible");
+        menu.style.display = "flex";
     }
 })
