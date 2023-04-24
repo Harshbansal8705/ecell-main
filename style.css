@@ -6,6 +6,14 @@
     box-sizing: border-box;
 }
 
+section {
+    padding: 3rem;
+}
+
+section.hero {
+    padding-top: 1.5rem;
+}
+
 body {
     background-color: #000000db;
     overflow-x: hidden;
@@ -13,7 +21,6 @@ body {
 }
 
 nav {
-    padding: 1rem 2em;
     text-align: center;
     display: flex;
     justify-content: space-between;
@@ -211,6 +218,10 @@ nav div.three {
     min-width: 100%;
     min-height: 100%;
     filter: brightness(30%);
+}
+
+section.hero {
+    height: 100vh;
 }
 
 section.hero h1 {
