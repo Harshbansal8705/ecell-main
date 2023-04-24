@@ -140,6 +140,10 @@ nav.pullDown a:hover:before {
 }
 
 /* Hamburger */
+nav div.three {
+    display: none;
+}
+
 .hamburger {
     scale: 0.8;
 }
@@ -211,20 +215,25 @@ nav.pullDown a:hover:before {
 
 section.hero h1 {
     font-size: 5rem;
-    margin: auto;
+    margin: 0 auto;
 }
 
 section.hero h2 {
     font-size: 4rem;
-    margin: auto;
+    margin: 0 auto;
 }
 
 section.hero div.Introclass_heading {
     height: inherit;
     display: flex;
     align-items: left;
-    justify-content: center;
+    justify-content: flex-start;
     flex-direction: column;
+}
+
+section.initiatives h1 {
+    font-size: 4rem;
+    text-align: center;
 }
 
 @media screen and (max-width: 960px) {
@@ -232,7 +241,7 @@ section.hero div.Introclass_heading {
         display: none;
     }
 
-    nav .col {
+    nav div.three {
         display: block;
     }
 
@@ -250,19 +259,55 @@ section.hero div.Introclass_heading {
     }
 }
 
-.container{
+@media screen and (max-width: 560px) {
+    section.hero h1 {
+        font-size: 2.5rem;
+    }
+
+    section.hero h2 {
+        font-size: 2rem;
+    }
+
+    section.initiatives h1 {
+        font-size: 3rem;
+    }
+
+    section.initiatives div.book {
+        scale: 0.8;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    section.hero h1 {
+        font-size: 1.9rem;
+    }
+
+    section.hero h2 {
+        font-size: 1.9rem;
+    }
+
+    section.initiatives h1 {
+        font-size: 2rem;
+    }
+
+    section.initiatives div.book {
+        scale: 0.6;
+    }
+}
+
+section.slider .container{
     position: relative;
     padding-top: 26em;
     height: 100vh;
 }
-.container .slide-container .slide{
+section.slider .container .slide-container .slide{
     min-height: 100vh;
     display: flex;
     align-items: center;
     flex-wrap: wrap;
     gap: 15px;
 }
-.container .slide-container .slide .content{
+section.slider .container .slide-container .slide .content{
     flex: 1 1 350px;
     animation:slideContent .4s linear .6s backwards ;
 }
@@ -272,12 +317,11 @@ section.hero div.Introclass_heading {
         opacity: 0;
         transform: translateX(-50px);
     }
-    
 }
-.container .slide-container .slide .image{
+section.slider .container .slide-container .slide .image{
     flex: 1 1 500px;
 }
-.container .slide-container .slide .image img{
+section.slider .container .slide-container .slide .image img{
     width: 100%;
     animation: slideImage .4s linear;
 }
@@ -290,24 +334,23 @@ section.hero div.Introclass_heading {
     
 }
 
-
-.container .slide-container{
+section.slider .container .slide-container{
     display: none;
 }
-.container .slide-container.active{
+section.slider .container .slide-container.active{
     display: block;
 }
-.container .slide-container:nth-child(1).slide{
+section.slider .container .slide-container:nth-child(1).slide{
     background: linear-gradient(90deg,rgb(204, 228, 200) 70%,rgb(196, 196, 136)) 30.1%;
 }
-.container .slide-container:nth-child(2).slide{
+section.slider .container .slide-container:nth-child(2).slide{
     background: linear-gradient(90deg,rgb(204, 228, 200) 70%,rgb(220, 220, 48)) 30.1%;
 }
-.container .slide-container:nth-child(3).slide{
+section.slider .container .slide-container:nth-child(3).slide{
     background: linear-gradient(90deg,rgb(204, 228, 200) 70%,rgb(13, 205, 157)) 30.1%;
 }
-.container #prev,
-.container #next{
+section.slider .container #prev,
+section.slider .container #next{
     margin-top: 15em;
     position: absolute;
     top: 50%;
@@ -320,16 +363,9 @@ section.hero div.Introclass_heading {
     font-size: 25px;
     cursor: pointer;    
 }
-.container #prev{
+section.slider .container #prev{
     left: 20px;
 }
-.container #next{
+section.slider .container #next{
     right: 20px;
 }
-
-
-
-
-
-
-
