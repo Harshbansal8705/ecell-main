@@ -306,6 +306,11 @@ section.initiatives h1 {
     }
 }
 
+
+
+
+/* /////////////////////////Bibhabasu ///////////////////////////*/
+
 section.slider .container{
     position: relative;
     padding-top: 26em;
@@ -313,7 +318,7 @@ section.slider .container{
 }
 section.slider .container .slide-container .slide{
     min-height: 100vh;
-    display: flex;
+    /* display: flex; */
     align-items: center;
     flex-wrap: wrap;
     gap: 15px;
@@ -333,8 +338,16 @@ section.slider .container .slide-container .slide .image{
     flex: 1 1 500px;
 }
 section.slider .container .slide-container .slide .image img{
-    width: 100%;
+    width: 80%;
     animation: slideImage .4s linear;
+    /* padding-right: 10em; */
+    /* margin-right: 500px ; */
+    height: 40em;
+    padding-top: 4em;
+    /* padding: 4em; */
+    padding-left: 16em;
+
+
 }
 
 @keyframes slideImage {
@@ -366,8 +379,7 @@ section.slider .container #next{
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    color: rgb(116, 116, 203);
-    background: rgb(20, 204, 29);
+    color: rgb(41, 236, 11);
     height: 50px;
     width: 40px;
     line-height: 50px;
@@ -376,7 +388,35 @@ section.slider .container #next{
 }
 section.slider .container #prev{
     left: 20px;
+    border-radius: 50%;
 }
 section.slider .container #next{
     right: 20px;
+    border-radius: 50%;
+
+}
+
+.overlay{
+    position: absolute;
+    transition: opacity 0.1s ease-in-out;
+    opacity: 0;
+
+}
+.container:hover .overlay{
+    opacity: 0.8;
+    /* transform: scale(2, 3); */
+}
+/* .image{
+    transition: scale 0.1s ease-in-out;
+} */
+/* .container:hover .image{
+    transform: scale(1, 2);
+} */
+p{
+    padding: 20em;
+}
+@media screen and (max-width: 930px){
+    p{
+        padding-right: .3em;
+    }
 }
